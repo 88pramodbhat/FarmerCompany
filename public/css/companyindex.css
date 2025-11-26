@@ -1,0 +1,146 @@
+/* Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1E88E5;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-buttons a,
+.navbar .nav-buttons span {
+    margin-left: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .nav-buttons a.btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: #4CAF50;
+    transition: 0.3s;
+}
+
+.navbar .nav-buttons a.btn:hover {
+    background-color: #45A049;
+}
+
+.navbar .nav-buttons span.welcome {
+    margin-right: 10px;
+}
+
+/* Page Title */
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin: 25px 0 10px 0;
+    color: #1E88E5;
+}
+
+.success {
+    text-align: center;
+    color: green;
+    margin-bottom: 15px;
+}
+
+/* Create New Listing Button */
+.nav-buttons h2 a.btn {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #FF9800;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-buttons h2 a.btn:hover {
+    background-color: #F57C00;
+}
+
+/* Listing Container */
+.listing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+/* Listing Card */
+.listing-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.listing-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #1E88E5;
+}
+
+.listing-card p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.listing-card p strong {
+    color: #333;
+}
+
+/* View Button */
+.listing-card a.view-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.listing-card a.view-btn:hover {
+    background-color: #45A049;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .nav-buttons {
+        margin-top: 10px;
+    }
+}

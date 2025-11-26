@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select User Type</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login As</h2>
+
+        <select id="userType" required>
+            <option value="">Select User Type</option>
+            <option value="farmer">Farmer</option>
+            <option value="company">Company</option>
+        </select>
+
+        <button onclick="goToLogin()">Continue</button>
+
+        <p>Don't have an account? <a href="/signup">Signup</a></p>
+    </div>
+
+    <script>
+        function goToLogin() {
+            const type = document.getElementById("userType").value;
+
+            if (type === "farmer") {
+                window.location.href = "/farmer/login";
+            } 
+            else if (type === "company") {
+                window.location.href = "/company/login";
+            } 
+            else {
+                alert("Please select a user type");
+            }
+        }
+    </script>
+
+</body>
+</html>

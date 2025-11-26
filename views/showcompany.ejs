@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= listing.wastetype %> - Details</title>
+    <link rel="stylesheet" href="/css/showcompanylisting.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="back-btn">⬅ Back</a>
+    <h2 class="title">Listing Details</h2>
+</header>
+
+<div class="container">
+    <div class="card">
+        <!-- Company Info -->
+        <h2><%= listing.companyName %></h2>
+        <h3>Owner: <%= listing.ownerName %></h3>
+
+        <!-- Contact Info -->
+        <p><strong>Email:</strong> <%= listing.email %></p>
+        <p><strong>Address:</strong> <%= listing.address %></p>
+        <p><strong>Location:</strong> <%= listing.location %></p>
+
+        <!-- Industry Info -->
+        <p><strong>Industry Type:</strong> <%= listing.industryType %></p>
+
+        <!-- Waste Requirements -->
+        <p><strong>Waste Type Required:</strong> <%= listing.wasteTypesRequired %></p>
+        <p><strong>Minimum Quantity Required:</strong> <%= listing.minQuantityRequired %> kg</p>
+        <p><strong>Available Quantity:</strong> <%= listing.quantity %></p>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <a href="/company/<%= listing._id %>/edit" class="edit-btn">Edit</a>
+            <form action="/company/<%= listing._id %>/?_method=DELETE" method="POST">
+                <button type="submit" class="delete-btn">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

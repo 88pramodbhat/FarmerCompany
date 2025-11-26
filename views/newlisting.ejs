@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Farmer Listing</title>
+  <link rel="stylesheet" href="/css/newlisting.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h2 class="logo">WasteToWealth</h2>
+    <div class="nav-buttons">
+      <a href="/" class="btn">Back to Listings</a>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h1>Create New Waste Listing</h1>
+<form action="/farmer/newlisting" method="POST" enctype="multipart/form-data">
+  
+  <label for="farmerName">Farmer Name</label>
+  <input type="text" id="farmerName" name="farmerName" required>
+
+  <label for="wastetype">Waste Type</label>
+  <input type="text" id="wastetype" name="wastetype" required>
+
+  <label for="quantity">Quantity (kg)</label>
+  <input type="number" id="quantity" name="quantity" required>
+
+  <label for="location">Location</label>
+  <input type="text" id="location" name="location" required>
+
+  <label for="contactPhone">Contact Phone</label>
+  <input type="text" id="contactPhone" name="contactPhone" required>
+
+  <label for="image">Upload Image</label>
+  <input type="file" id="image" name="image" accept="image/*" required>
+
+  <button type="submit" class="submit-btn">Create Listing</button>
+</form>
+  </div>
+
+</body>
+</html>

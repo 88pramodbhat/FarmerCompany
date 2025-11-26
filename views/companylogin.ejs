@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Signup</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Company Signup</h2>
+
+        <form action="/company/login" method="POST">
+
+            <!-- Required Field -->
+            <input type="text" name="companyName" placeholder="Company Name" required>
+
+            <!-- Optional Fields -->
+            <input type="text" name="ownerName" placeholder="Owner Name">
+            <input type="text" name="industryType" placeholder="Industry Type">
+
+            <!-- Contact + Login -->
+            <input type="email" name="email" placeholder="Company Email" required>
+            <input type="text" name="contactNumber" placeholder="Contact Number">
+
+            <!-- Address -->
+            <input type="text" name="address" placeholder="Address">
+
+            <!-- Location -->
+            <input type="text" name="district" placeholder="District">
+            <input type="text" name="state" placeholder="State">
+
+            <!-- Waste Requirements -->
+            <label>Waste Types Required (Select Multiple):</label>
+            <select name="wasteTypesRequired" multiple size="4">
+                <option value="Plastic">Plastic</option>
+                <option value="Paper">Paper</option>
+                <option value="E-Waste">E-Waste</option>
+                <option value="Organic">Organic Waste</option>
+            </select>
+
+            <input type="number" name="minQuantityRequired" placeholder="Minimum Quantity (kg)">
+
+            <!-- Legal -->
+            <input type="text" name="gstNumber" placeholder="GST Number">
+            <input type="text" name="companyLicenseNumber" placeholder="Company License Number">
+
+            <!-- Required Password -->
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p>Already registered? <a href="/company/login">Login</a></p>
+
+    </div>
+</body>
+</html>

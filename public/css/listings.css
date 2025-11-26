@@ -1,0 +1,116 @@
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a5cf5;
+    padding: 15px 25px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons .btn {
+    background: white;
+    color: #0a5cf5;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nav-buttons .btn:hover {
+    background: #e3e3e3;
+}
+
+/* --- Page Title --- */
+.title {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 28px;
+}
+
+/* --- Card Container (GRID) --- */
+.listing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* --- Card --- */
+.listing-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.listing-card:hover {
+    transform: scale(1.03);
+}
+
+/* --- Image --- */
+.listing-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- Card Text --- */
+.listing-card h2 {
+    margin: 10px 0 5px 0;
+    color: #0a5cf5;
+}
+
+.listing-card p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+/* --- VIEW BUTTON --- */
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: #0a5cf5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.view-btn:hover {
+    background: #0846c3;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .listing-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 10px;
+        gap: 15px;
+    }
+}
+
+
+

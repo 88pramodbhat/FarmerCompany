@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Waste Listings</title>
+
+    <link rel="stylesheet" href="/css/companyindex.css">
+</head>
+
+<body>
+ 
+   
+
+
+    <!-- NAVBAR -->
+<header class="navbar">
+    <h2 class="logo">WasteToWealth</h2>
+
+    <div class="nav-buttons">
+
+        <% if (!currentUser) { %>
+            <!-- User NOT logged in -->
+            <a href="/login" class="btn">Login</a>
+            <a href="/register" class="btn">Register</a>
+        <% } else { %>
+            <!-- User logged in -->
+            <span class="welcome">Welcome, <%= currentUser.email %></span>
+            <a href="/logout" class="btn">Logout</a>
+        <% } %>
+
+    </div>
+</header>
+
+
+
+    <h1 class="title">Farmers Waste Listings</h1>
+
+    <h3 class="success"><%=success%></h3> 
+
+ <h2 class="nav-buttons">
+ <a href="/company/login" class="btn">create new listing</a>
+</h2>
+
+
+    <div class="listing-container">
+
+        <% allistings.forEach(listing => { %>
+
+            <div class="listing-card"> 
+                
+
+
+                <h2><%= listing.ownerName %></h2>
+
+                <p><strong>Quantity:</strong> <%= listing.minQuantityRequired%> kg</p>
+                <p><strong>Location:</strong> <%= listing.location %></p>
+                      <p><strong>IndustryType</strong> <%= listing.industryType %></p>
+
+                <p><strong>Contact:</strong> <%= listing.contactPhone %></p>
+
+                <a href="/company/<%= listing._id %>" class="view-btn">View</a>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+</html>

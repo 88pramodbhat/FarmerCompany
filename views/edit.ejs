@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Farmer Listing</title>
+  <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2 class="logo">WasteToWealth</h2>
+    <div class="nav-buttons">
+      <a href="/" class="btn">Back to Listings</a>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h1>Edit Waste Listing</h1>
+
+    <!-- Form to update listing -->
+    <form action="/farmer/<%= listing._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      
+      <label for="farmerName">Farmer Name</label>
+      <input type="text" id="farmerName" name="farmerName" value="<%= listing.farmerName %>" required>
+
+      <label for="wastetype">Waste Type</label>
+      <input type="text" id="wastetype" name="wastetype" value="<%= listing.wastetype %>" required>
+
+      <label for="quantity">Quantity (kg)</label>
+      <input type="number" id="quantity" name="quantity" value="<%= listing.quantity %>" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" value="<%= listing.location %>" required>
+
+      <label for="contactPhone">Contact Phone</label>
+      <input type="text" id="contactPhone" name="contactPhone" value="<%= listing.contactPhone %>" required>
+
+      <label for="image">Current Image</label><br>
+      <img src="<%= listing.image %>" alt="<%= listing.wastetype %>" style="width:200px; height:auto; margin-bottom:10px;"><br>
+
+      <label for="image">Upload New Image (optional)</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <button type="submit" class="submit-btn">Update Listing</button>
+    </form>
+  </div>
+
+</body>
+</html>

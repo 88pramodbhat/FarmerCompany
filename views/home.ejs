@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WasteToWealth - Home</title>
+
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h2 class="logo">WasteToWealth</h2>
+
+        <div class="nav-buttons">
+            <% if (!currentUser) { %>
+                <a href="/login" class="btn">Login</a>
+                <a href="/register" class="btn">Register</a>
+            <% } else { %>
+                <span class="welcome">Welcome, <%= currentUser.email %></span>
+                <a href="/logout" class="btn">Logout</a>
+            <% } %>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="https://static.theprint.in/wp-content/uploads/2019/02/FARMERS-IN-INDIA-1024x576.jpg" class="hero-img">
+
+        <div class="hero-text">
+            <h1>Turning Waste Into Opportunity</h1>
+            <p>Connecting Farmers & Industries for a Sustainable Future</p>
+
+            <div class="hero-buttons">
+                <a href="/farmer/listings" class="hero-btn">Farmers Waste Listings</a>
+                <a href="/company/listings" class="hero-btn">Company Waste Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <h2>How WasteToWealth Helps</h2>
+
+        <div class="about-container">
+
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+">
+                <h3>Farmers Earn More</h3>
+                <p>Farmers sell leftover crops, scrap and plastics to industries and generate extra income.</p>
+            </div>
+
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800">
+                <h3>Industries Get Raw Material</h3>
+                <p>Industries get low-cost waste materials directly from farmers, reducing procurement cost.</p>
+            </div>
+
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800">
+                <h3>Environment Benefits</h3>
+                <p>Less pollution and more recycling — making waste management easier and cleaner.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUCCESS STORIES -->
+ <section class="success-section">
+    <h2>Success Stories</h2>
+
+    <div class="success-container">
+
+        <div class="success-card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800">
+            <p>“I used to burn crop waste. Now industries buy it monthly. WasteToWealth changed everything.”</p>
+            <h4>- Ramesh, Farmer</h4>
+        </div>
+
+        <div class="success-card">
+            <img src="https://images.assettype.com/swarajya/2018-03/afc57194-54b7-4b88-bac9-6d9658bbc462/a45d7542-4aef-4b69-8d19-3ae5856d8285.jpg?w=1280&q=100&fmt=pjpeg&auto=format">
+            <p>“We get 40% cheaper recyclable plastic directly from farmers. A game changer!”</p>
+            <h4>- Modern Polymers Industry</h4>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- OPTIONS SECTION -->
+    <section class="options-section">
+        <h2>Explore</h2>
+
+        <div class="options-container">
+
+            <div class="option-card">
+                <h3>Farmers Waste Listings</h3>
+                <p>See waste provided by farmers: crops waste, scrap, plastics, etc.</p>
+                <a href="/farmer/listings" class="view-btn">View Listings</a>
+            </div>
+
+            <div class="option-card">
+                <h3>Company Waste Listings</h3>
+                <p>Industries posting the waste they need or want to buy.</p>
+                <a href="/company/listings" class="view-btn">View Listings</a>
+            </div>
+
+            <% if (currentUser) { %>
+                <div class="option-card">
+                    <h3>Create New Listing</h3>
+                    <p>Add your waste listing to connect with buyers.</p>
+                    <a href="/newlisting" class="view-btn">Create Listing</a>
+                </div>
+            <% } %>
+
+        </div>
+    </section>
+
+</body>
+</html>

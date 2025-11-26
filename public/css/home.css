@@ -1,0 +1,175 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: #2d6a4f;
+    color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-buttons .btn {
+    color: white;
+    padding: 10px 18px;
+    background: #40916c;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.welcome {
+    margin-right: 10px;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-buttons .hero-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #52b788;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.about-card {
+    width: 28%;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-card h3 {
+    margin: 12px 0;
+}
+
+/* SUCCESS STORIES */
+/* SUCCESS STORIES */
+.success-section {
+    padding: 40px;
+    background: #e9f5ee;
+    text-align: center;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;      /* make responsive */
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.success-card {
+    width: 320px;         /* fixed clean width */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.success-card img {
+    width: 100%;
+    height: auto;          /* FIX: image maintains original ratio */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.success-card p {
+    margin: 15px 0;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.success-card h4 {
+    margin-top: 5px;
+    color: #2d6a4f;
+}
+
+
+/* OPTIONS SECTION */
+.options-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.option-card {
+    width: 28%;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.option-card .view-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #2d6a4f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
