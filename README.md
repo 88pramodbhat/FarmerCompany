@@ -55,9 +55,7 @@ wastetowealth/
 ├── public/                 # Static assets
 │   ├── css/                 # Stylesheets
 │   └── uploads/             # Uploaded images
-├── tests/                  # Selenium test suite
-│   ├── selenium_tests.py    # Main test file
-│   └── ...                  # Other test files
+│   
 ├── app.js                  # Main application file
 └── package.json            # Dependencies
 ```
@@ -253,20 +251,3 @@ This is a college project, but contributions are welcome!
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the ISC License.
-
-## 👨‍💻 Author
-
-**Pramod** - College Student
-
-## 🙏 Acknowledgments
-
-- Built as part of college curriculum
-- Inspired by sustainable development goals
-- Focus on connecting rural and urban communities
-
----
-
-*This project demonstrates full-stack web development skills with user authentication, database integration, and automated testing.*
